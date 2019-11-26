@@ -207,7 +207,7 @@ public class WifiEntryPreference extends Preference implements WifiEntry.WifiEnt
             return;
         }
 
-        final Drawable drawable = mIconInjector.getIcon(showX, level);
+        final Drawable drawable = mIconInjector.getIcon(showX, level, getContext());
         if (drawable != null) {
             drawable.setTint(Utils.getColorAttrDefaultColor(getContext(), getIconColorAttr()));
             setIcon(drawable);
