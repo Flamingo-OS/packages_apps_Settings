@@ -54,6 +54,6 @@ public class BasebandVersionPreferenceController extends BasePreferenceControlle
             }
         }
         return SystemProperties.get(BASEBAND_PROPERTY,
-                mContext.getString(R.string.device_info_default));
+                mContext.getString(R.string.device_info_default)).split(",")[0];
     }
 }
