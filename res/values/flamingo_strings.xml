@@ -114,4 +114,7 @@
     <string name="privileged_euicc_management_title">Enable privileged eSIM management</string>
     <string name="privileged_euicc_management_summary">Requires Sandboxed Google Play installation</string>
 
+    <!-- Hotspot -->
+    <string name="wifi_hotspot_hidden_ssid_title">Hidden network</string>
+    <string name="wifi_hotspot_hidden_ssid_summary">Your mobile hotspot\'s name won\'t appear in the list of available WLAN networks.</string>
 </resources>
