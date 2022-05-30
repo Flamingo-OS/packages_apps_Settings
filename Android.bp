@@ -67,7 +67,14 @@ android_library {
         "btadva_settings_java_defaults",
     ],
 
-    srcs: ["src/**/*.java"],
+    srcs: [
+        "src/**/*.java",
+        "src/**/*.kt",
+        ":FlamingoSettings_srcs",
+    ],
+    resource_zips: [
+        ":FlamingoSettings_res",
+    ],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",
@@ -77,7 +84,10 @@ android_library {
         "androidx.core_core",
         "androidx.appcompat_appcompat",
         "androidx.cardview_cardview",
+        "androidx.fragment_fragment",
+        "androidx.fragment_fragment-ktx",
         "androidx.preference_preference",
+        "androidx.preference_preference-ktx",
         "androidx.recyclerview_recyclerview",
         "com.google.android.material_material",
         "setupcompat",
@@ -97,6 +107,7 @@ android_library {
         "android.hardware.dumpstate-V1.1-java",
         "lottie",
         "windowExtLib",
+        "vendor_support",
     ],
 
     libs: [
@@ -105,6 +116,9 @@ android_library {
         "app-compat-annotations",
         "telephony-ext",
         "extphonelib",
+    ],
+    additional_manifests: [
+        ":FlamingoSettings_manifest",
     ],
 }
 
@@ -132,8 +146,14 @@ android_app {
         "androidx.window.sidecar",
     ],
     resource_dirs: [],
+    additional_manifests: [
+        ":FlamingoSettings_manifest",
+    ],
     optimize: {
-        proguard_flags_files: ["proguard.flags"],
+        proguard_flags_files: [
+            "proguard.flags",
+            ":FlamingoSettings_proguard_flags",
+        ],
     },
     libs: [
         "extphonelib"
