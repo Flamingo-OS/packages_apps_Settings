@@ -21,6 +21,15 @@
     android:key="top_level_settings">
 
     <com.android.settings.widget.HomepagePreference
+        android:fragment="com.flamingo.settings.FlamingoSettingsFragment"
+        android:icon="@drawable/ic_flamingo"
+        android:key="top_level_flamingo"
+        android:order="-160"
+        android:title="@string/flamingo_settings_title"
+        android:summary="@string/flamingo_settings_summary"
+        settings:highlightableMenuKey="@string/menu_key_flamingo" />
+
+    <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
         android:icon="@drawable/ic_settings_wireless"
         android:key="top_level_network"
