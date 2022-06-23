@@ -22,14 +22,14 @@ import android.provider.Settings
 
 import com.android.settings.R
 import com.android.settings.core.TogglePreferenceController
-import com.flamingo.settings.Utils
+import com.flamingo.settings.getBoolSysUIResource
 
 class VolumePanelPositionPreferenceController(
     context: Context,
     preferenceKey: String,
 ) : TogglePreferenceController(context, preferenceKey) {
 
-    private val defaultValue = Utils.getBoolSysUIResource(context, CONFIG_NAME)
+    private val defaultValue = getBoolSysUIResource(context, CONFIG_NAME)
 
     override fun getAvailabilityStatus(): Int = AVAILABLE
 
