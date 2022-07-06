@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2022 FlamingoOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- String for removal of sensitive info on about, depending on tap -->
+    <string name="device_info_protected_single_press">Toque para mostrar informações</string>
+
+    <!-- Developer info -->
+    <string name="device_maintainer">Mantenedor</string>
+
+    <!-- Flamingo version -->
+    <string name="flamingo_version">Versão Flamingo</string>
+    <string name="no_application_found_to_open_link">Nenhum app para abrir o link</string>
+
+    <!-- App details: open play store link if app is user installed -->
+    <string name="app_play_store">Google Play</string>
+
+    <!-- In-call feedback -->
+    <string name="incall_feeedback_vibrate_title">Vibrar para indicar o status da ligação</string>
+
+    <!-- Doze on charge -->
+    <string name="doze_on_charge_title">Tela sempre acesa enquanto carregar</string>
+    <string name="doze_on_charge_summary">Manter a tela ligada enquanto estiver carregando</string>
+
+    <!-- Default getTimeSpentInApp string for Wellbeing to display. [CHAR LIMIT=NONE] -->
+    <string name="duration_less_than_one_minute">Menos de 1 minuto</string>
+
+    <!-- Summary for Wellbeing screen time usage. [CHAR LIMIT=NONE] -->
+    <string name="screen_time_summary_usage_today">%1$s hoje</string>
+
+    <!-- Annoying Notifs -->
+    <string name="notification_sound_vib_screen_on_title">Alerta de Notificação</string>
+    <string name="notification_sound_vib_screen_on_summary">Tocar e vibrar enquanto estiver com a tela ligada</string>
+
+    <!-- Volume link notification -->
+    <string name="volume_link_notification_title">Unificar toque &amp; volumes de notificação</string>
+
+    <!-- Fullscreen gestures -->
+    <string name="other_controls_title">Outros Controles</string>
+    <string name="fullscreen_gestures_title">Gestos de Tela Cheia</string>
+    <string name="fullscreen_gestures_summary">Esconder traço de navbar e espaço do teclado</string>
+
+    <!-- Gesture navbar length -->
+    <string name="gesture_navbar_length_title">Tamanho do Traço</string>
+    <string name="short_label">Curto</string>
+    <string name="long_label">Longo</string>
+
+    <!-- Torch gesture -->
+    <string name="gesture_double_tap_power_summary_disabled">Desabilitado pelo gesto da lanterna</string>
+    <string name="double_tap_power_for_torch_title">Habilitar lanterna</string>
+    <string name="double_tap_power_for_torch_summary_enabled">Aperte o botão de ligar/desligar rapidamente 2 vezes para habilitar a lanterna</string>
+    <string name="double_tap_power_for_torch_summary_disabled">Desabilitado pelo gesto para abrir a camera</string>
+    <string name="power_menu_long_press_for_torch">Segure para habilitar a lanterna</string>
+    <string name="torch_long_press_power_text">Segurar para habilitar a lanterna só funciona com a tela desligada.\nSegurar de novo irá desligar a lanterna, mesmo que a tela esteja desligada.</string>
+    <string name="power_menu_summary_long_press_for_torch">Habilitar lanterna</string>
+
+    <!-- AOD Schedule -->
+    <string name="always_on_display_schedule_title">Esquema do AOD</string>
+    <string name="always_on_display_schedule_sunset">Nascer do Sol</string>
+    <string name="always_on_display_schedule_sunrise">Pôr do Sol</string>
+    <string name="always_on_display_schedule_mixed_sunset">Ligar do Nascer do Sol até um horário</string>
+    <string name="always_on_display_schedule_mixed_sunrise">Ligar de um horário até o pôr do sol</string>
+
+    <!-- One shot automatic brightness -->
+    <string name="auto_brightness_one_shot_title">Brilho Automático de tiro único</string>
+    <string name="auto_brightness_one_shot_summary">O ajuste de brilho da tela só irá acontecer no momento que a tela for ligada</string>
+
+    <!-- Min / max refresh rate -->
+    <string name="min_refresh_rate_title">Frequência de Tela mínima</string>
+    <string name="max_refresh_rate_title">Frequência de Tela máxima</string>
+
+    <!-- Vibration patterns -->
+    <string name="vibration_pattern_title">Estilo de Vibração para Toque</string>
+    <string name="pattern_custom">Customizável</string>
+    <string name="custom_vibration_pattern_title">Estilo Customizável</string>
+    <string name="custom_vibration_pattern_summary">Definir um estilo Customizável de vibração</string>
+
+    <!-- Cycle through ringer modes gesture -->
+    <string name="prevent_ringing_option_normal">Normal</string>
+
+    <!-- Per-app volume control -->
+    <string name="app_volume">Volume do App</string>
+
+    <!-- Volume panel position -->
+    <string name="volume_panel_position_title">Painel de Volume à esquerda</string>
+
+    <!-- General -->
+    <string name="copied_to_clipboard">Copiado para o clipboard</string>
+    <string name="longpress_to_clipboard">Toque longo para copiar</string>
+
+</resources>
