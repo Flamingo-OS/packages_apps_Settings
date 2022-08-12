@@ -20,6 +20,10 @@ import static com.android.settings.security.EncryptionStatusPreferenceController
 import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
+
+import androidx.preference.PreferenceGroup;
+import androidx.preference.PreferenceScreen;
 
 import com.android.settings.R;
 import com.android.settings.biometrics.combination.CombinedBiometricProfileStatusPreferenceController;
@@ -56,6 +60,7 @@ public class SecuritySettings extends DashboardFragment {
     public static final int UNUNIFY_LOCK_CONFIRM_DEVICE_REQUEST = 130;
 
     private static final String APP_LOCK_PREF_KEY = "app_lock";
+    private static final String SECURITY_STATUS_KEY = "security_status";
 
     @Override
     public int getMetricsCategory() {
@@ -96,6 +101,17 @@ public class SecuritySettings extends DashboardFragment {
             return;
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        super.onCreatePreferences(savedInstanceState, rootKey);
+        final PreferenceScreen preferenceScreen = getPreferenceScreen();
+        final PreferenceGroup securityStatusGroup =
+            (PreferenceGroup) preferenceScreen.findPreference(SECURITY_STATUS_KEY);
+        if (securityStatusGroup != null && securityStatusGroup.getPreferenceCount() == 0) {
+            preferenceScreen.removePreference(securityStatusGroup);
+        }
     }
 
     void startUnification() {
