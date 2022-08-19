@@ -169,6 +169,7 @@ import com.android.settings.wifi.details.WifiNetworkDetailsFragment;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2;
 import com.android.settings.wifi.tether.WifiTetherSettings;
+import com.flamingo.settings.FlamingoSettingsActivity;
 
 import ink.kscope.settings.wifi.tether.WifiTetherClientManager;
 
@@ -335,6 +336,7 @@ public class SettingsGateway {
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
             // Home page
+            FlamingoSettingsActivity.class.getName(),
             Settings.NetworkDashboardActivity.class.getName(),
             Settings.ConnectedDeviceDashboardActivity.class.getName(),
             Settings.AppDashboardActivity.class.getName(),
