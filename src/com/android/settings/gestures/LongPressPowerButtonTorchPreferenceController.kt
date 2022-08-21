@@ -20,6 +20,7 @@ import android.content.Context
 import android.database.ContentObserver
 import android.os.Handler
 import android.os.Looper
+import android.os.UserHandle
 import android.provider.Settings
 
 import androidx.lifecycle.Lifecycle.Event
@@ -92,10 +93,11 @@ class LongPressPowerButtonTorchPreferenceController(
 
     override fun setChecked(isChecked: Boolean): Boolean {
         footerPreference?.setVisible(isChecked)
-        return Settings.Secure.putInt(
+        return Settings.Secure.putIntForUser(
             mContext.contentResolver,
             Settings.Secure.TORCH_LONG_PRESS_POWER,
-            if (isChecked) 1 else 0
+            if (isChecked) 1 else 0,
+            UserHandle.USER_CURRENT
         )
     }
 
