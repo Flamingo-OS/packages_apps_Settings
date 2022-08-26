@@ -20,7 +20,6 @@
 
     <!-- Developer info -->
     <string name="device_maintainer">Сопровождающий устройства</string>
-    <string name="device_maintainer_name" translatable="false"></string>
 
     <!-- Flamingo version -->
     <string name="flamingo_version">Версия Flamingo</string>
@@ -119,7 +118,7 @@
     <plurals name="wifi_hotspot_auto_off_timeout">
         <item quantity="one">Выключать, если устройство не подключено в течение <xliff:g id="DURATION">%1$d</xliff:g> минут</item>
     </plurals>
-    <string name="wifi_hotspot_auto_off_timeout_never">Никогда не отключать хотспот/string>
+    <string name="wifi_hotspot_auto_off_timeout_never">Никогда не отключать хотспот</string>
     <string name="wifi_hotspot_client_manager_title">Подключенные устройства</string>
     <string name="wifi_hotspot_client_manager_summary">Список и управление устройствами, подключенными к точке доступа, и установка ограничения количества клиентов</string>
     <string name="wifi_hotspot_client_manager_list_only_summary">Список устройств, подключенных к точке доступа</string>
