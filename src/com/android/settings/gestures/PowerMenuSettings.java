@@ -23,6 +23,7 @@ import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.core.AbstractPreferenceController;
+import com.android.settingslib.core.lifecycle.Lifecycle;
 import com.android.settingslib.search.SearchIndexable;
 
 import java.util.List;
@@ -48,10 +49,22 @@ public class PowerMenuSettings extends DashboardFragment {
     }
 
     @Override
-    protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
-        return List.of(new LongPressPowerButtonTorchPreferenceController(context, getSettingsLifecycle()));
+    protected final List<AbstractPreferenceController> createPreferenceControllers(final Context context) {
+        return buildPreferenceControllers(context, getSettingsLifecycle());
+    }
+
+    private static final List<AbstractPreferenceController> buildPreferenceControllers(
+        final Context context,
+        final Lifecycle lifecycle
+    ) {
+        return List.of(new LongPressPowerButtonTorchPreferenceController(context, lifecycle));
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.power_menu_settings);
+            new BaseSearchIndexProvider(R.xml.power_menu_settings) {
+                @Override
+                public List<AbstractPreferenceController> createPreferenceControllers(final Context context) {
+                    return buildPreferenceControllers(context, null /* lifecycle */);
+                }
+            };
 }
