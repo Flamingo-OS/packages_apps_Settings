@@ -75,11 +75,18 @@ public class BluetoothCodecDialogPreference extends BaseBluetoothDialogPreferenc
         for (int i = 0; i < stringArray.length; i++) {
             mRadioButtonStrings.add(stringArray[i]);
         }
+        final String lc3_codec = context.getResources().getString(R.string.bluetooth_lc3_codec);
+        if (mRadioButtonStrings.size() != mRadioButtonIds.size()) {
+            mRadioButtonStrings.add(lc3_codec);
+        }
 
         stringArray = context.getResources().getStringArray(R.array.bluetooth_a2dp_codec_summaries);
         Log.e(TAG, "a2dp_codec_summaries array length: " + stringArray.length);
         for (int i = 0; i < stringArray.length; i++) {
             mSummaryStrings.add(stringArray[i]);
+        }
+        if (mSummaryStrings.size() != mRadioButtonIds.size()) {
+            mSummaryStrings.add(lc3_codec);
         }
     }
 }
