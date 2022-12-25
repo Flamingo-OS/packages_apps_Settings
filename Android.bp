@@ -65,12 +65,12 @@ android_library {
         "SettingsLib-search-defaults",
         "framework-wifi-vendor-hide-access-defaults",
         "btadva_settings_java_defaults",
+        "flamingo_settings_core_defaults",
     ],
 
     srcs: [
         "src/**/*.java",
         "src/**/*.kt",
-        ":FlamingoSettings_srcs",
     ],
     resource_zips: [
         ":FlamingoSettings_res",
@@ -122,9 +122,6 @@ android_library {
         "telephony-ext",
         "extphonelib",
     ],
-    additional_manifests: [
-        ":FlamingoSettings_manifest",
-    ],
 }
 
 platform_compat_config {
@@ -148,9 +145,6 @@ android_app {
     static_libs: ["Settings-core"],
     uses_libs: ["org.apache.http.legacy"],
     resource_dirs: [],
-    additional_manifests: [
-        ":FlamingoSettings_manifest",
-    ],
     optimize: {
         proguard_flags_files: [
             "proguard.flags",
